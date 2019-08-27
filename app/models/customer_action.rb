@@ -1,0 +1,2 @@
+class CustomerAction < ApplicationRecord
+end
