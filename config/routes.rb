@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   resources :users do
   end
+
+  get '/customer_sessions', to: 'customer_sessions#index'
 end
