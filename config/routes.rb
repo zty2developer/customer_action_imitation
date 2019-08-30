@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
 
   get '/customer_sessions', to: 'customer_sessions#index'
+  post '/submit_result', to: 'customer_sessions#submit_result'
 end

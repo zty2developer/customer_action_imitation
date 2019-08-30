@@ -1,0 +1,2 @@
+class FinalScore < ApplicationRecord
+end
