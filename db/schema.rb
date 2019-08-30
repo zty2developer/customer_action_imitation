@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_27_022111) do
+ActiveRecord::Schema.define(version: 2019_08_30_123019) do
 
   create_table "customer_actions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "abbreviation"
     t.string "name"
     t.string "purchase_prediction"
     t.decimal "purchase_probability", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "customer_sessions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "session_index"
+    t.string "session_actions"
+    t.string "true_purchase_label"
+    t.string "intervene_prediction"
+    t.string "intervene_probability"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

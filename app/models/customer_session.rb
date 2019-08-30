@@ -1,0 +1,2 @@
+class CustomerSession < ApplicationRecord
+end
