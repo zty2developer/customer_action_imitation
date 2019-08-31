@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no" />
+<title>welcome</title>
+<link rel="stylesheet" href="../css/index.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/siteinfo.js"></script>
+</head>
+<body>
+	<div class="welcome">
+		<div class="img">
+			<img src="../image/wel.jpg" alt="">
+		</div>
+		<div class="input">
+			<input type="text" name="userName" id="userName" placeholder="Type your ID here" />
+		</div>
+		<div>
+			<input  class="startbtn" type="button" name="startbtn"  id="startbtn" onclick="startEven();" value="start" />
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	function startEven(){
+		var userName=$("#userName").val();
+		if(!userName||""==userName){
+			alert("Type your ID here");
+			return;
+		}
+		userName=userName.trim();
+		var params={login:userName,with_prediction:true};
+		$.ajax({
+			url:apiurlprefix+'users',
+			data: params,
+			type:'POST',
+			success: function (result) {
+		          console.log(result);
+		          if(result.status==0){
+		        	  $.cookie('userName',userName,{path: '/' });
+		        	  $.cookie('userID',result.user_id,{path: '/' });
+		        	  window.location.href="index.html";
+		          }else{
+		        	  alert(result.message); 
+		          }
+		        },
+		    error: function (erroresult) {
+		          console.log(erroresult);
+		          alert("login fail");
+		    }
+		});
+	}
+</script>
+</html>

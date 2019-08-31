@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   get '/customer_sessions', to: 'customer_sessions#index'
   post '/submit_result', to: 'customer_sessions#submit_result'
+
+  get '/with_prediction', to: redirect('/session-html-client/html/welcome.html')
+  get '/without_prediction', to: redirect('/session-html-no-client/html/welcome.html')
 end
