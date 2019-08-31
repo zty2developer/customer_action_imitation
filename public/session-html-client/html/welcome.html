@@ -34,6 +34,7 @@
 		}
 		userName=userName.trim();
 		var params={login:userName,with_prediction:true};
+		$("#startbtn").removeAttr("onclick");
 		$.ajax({
 			url:apiurlprefix+'users',
 			data: params,
@@ -45,10 +46,12 @@
 		        	  $.cookie('userID',result.user_id,{path: '/' });
 		        	  window.location.href="index.html";
 		          }else{
+		        	  $("#startbtn").attr("onclick","startEven()");
 		        	  alert("User ID exists. Try Another one."); 
 		          }
 		        },
 		    error: function (erroresult) {
+		    	$("#startbtn").attr("onclick","startEven()");
 		          console.log(erroresult);
 		          alert("login fail");
 		    }

@@ -15,7 +15,7 @@
 <body>
 	<div class="welcome">
 		<div class="img">
-			<img src="../image/wel.jpg" alt="">
+			<img src="../image/wel_n.png" alt="">
 		</div>
 		<div class="input">
 			<input type="text" name="userName" id="userName" placeholder="Type your ID here" />
@@ -34,6 +34,7 @@
 		}
 		userName=userName.trim();
 		var params={login:userName,with_prediction:false};
+		$("#startbtn").removeAttr("onclick");
 		$.ajax({
 			url:apiurlprefix+'users',
 			data: params,
@@ -45,10 +46,12 @@
 		        	  $.cookie('userID',result.user_id,{path: '/' });
 		        	  window.location.href="index.html";
 		          }else{
-		        	  alert(result.message); 
+		        	  $("#startbtn").attr("onclick","startEven()");
+		        	  alert("User ID exists. Try Another one."); 
 		          }
 		        },
 		    error: function (erroresult) {
+		    	$("#startbtn").attr("onclick","startEven()");
 		          console.log(erroresult);
 		          alert("login fail");
 		    }
