@@ -291,7 +291,7 @@ function submitEven(){
 		$(".cuo").show();
 		$(".dui").hide();
 		$(".missed").hide();
-		$("#ResultMessage").html("Customer feel you are annoying!");
+		$("#ResultMessage").html("Customer felt you are annoying!");
 		$("#Result").html("Lost&nbsp;"+confidentradio);
 		$("#modal").show();
 	}
