@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_30_134922) do
+ActiveRecord::Schema.define(version: 2019_08_31_111248) do
 
   create_table "customer_actions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "abbreviation"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_08_30_134922) do
     t.string "login"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "with_prediction"
   end
 
 end
