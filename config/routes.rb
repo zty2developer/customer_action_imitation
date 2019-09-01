@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   get '/with_prediction', to: redirect('/session-html-client/html/welcome.html')
   get '/without_prediction', to: redirect('/session-html-no-client/html/welcome.html')
-  get '/with_fixed_confidence', to: redirect('/session-html-c-client/html/welcome.html')
+  get '/with_prediction_fixed_confidence', to: redirect('/session-html-c-client/html/welcome.html')
+  get '/without_prediction_fixed_confidence', to: redirect('/session-html-no-d-client/html/welcome.html')
 end
