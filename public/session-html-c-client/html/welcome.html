@@ -15,7 +15,7 @@
 <body>
 	<div class="welcome">
 		<div class="img">
-			<img src="../image/wel_n.png" alt="">
+			<img src="../image/wel_m.png" alt="">
 		</div>
 		<div class="input">
 			<input type="text" name="userName" id="userName" placeholder="Type your ID here" />
@@ -34,7 +34,7 @@ $.removeCookie("userID");
 			return;
 		}
 		userName=userName.trim();
-		var params={login:userName,with_prediction:1};
+		var params={login:userName,with_prediction:2};
 		$("#startbtn").removeAttr("onclick");
 		$.ajax({
 			url:apiurlprefix+'users',
