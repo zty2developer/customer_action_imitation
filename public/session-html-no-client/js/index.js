@@ -194,8 +194,8 @@ function initPageData(){
 	showData(currentSessionIndex,totalSessionCount,currentActionIndex,initData.Actions,initData.PurchasePrediction[currentActionIndex],toPercent(initData.PurchaseProbability[currentActionIndex]));
 	showActionsHistory(currentActionIndex,initData);
 	$("#submitBTN").attr("onclick","showConfident()");
-	var timeUnit=5000;
-	// 定时5秒刷新
+	var timeUnit=3000;
+	// 定时3秒刷新
 	refreshTask = setInterval(refreshTaskFN, timeUnit);
 	// clearInterval(refreshTask);//清除定时任务	
 }
@@ -334,8 +334,8 @@ function nextEven(ele){
 	
 	showData(currentSessionIndex,totalSessionCount,currentActionIndex,initData.Actions,initData.PurchasePrediction[currentActionIndex],toPercent(initData.PurchaseProbability[currentActionIndex]));
 	showActionsHistory(currentActionIndex,initData);
-	var timeUnit=5000;
-	// 定时5秒刷新
+	var timeUnit=3000;
+	// 定时3秒刷新
 	refreshTask = setInterval(refreshTaskFN, timeUnit);
 	// clearInterval(refreshTask);//清除定时任务
 	
