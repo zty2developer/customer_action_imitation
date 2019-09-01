@@ -308,8 +308,9 @@ p{margin:0;}
    
 }
 .modal-body .img .dui {
-    height: 60px;
-    margin-top: 46%;
+   height: 76px;
+    margin-top: 29%;
+    margin-left: 16px;
 }
 .modal-body .img .cuo {
     height: 76px;
@@ -318,8 +319,8 @@ p{margin:0;}
 }
 .modal-body .img .missed{
 	height: 76px;
-    margin-top: 26%;
-    width: 180px;
+    margin-top: 29%;
+    margin-left: 16px;
 }
 .modal-body .text {
     float: left;
