@@ -34,7 +34,7 @@ $.removeCookie("userID",{ path: '/'});
 			return;
 		}
 		userName=userName.trim();
-		var params={login:userName,with_prediction:1};
+		var params={login:userName,with_prediction:3};
 		$("#startbtn").removeAttr("onclick");
 		$.ajax({
 			url:apiurlprefix+'users',
