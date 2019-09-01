@@ -51,7 +51,8 @@ var actionName = {
 		"SI":"Search Sales Information",
 		"SS":"Search Specific Discount",
 		"CMT":"Write Comments",
-		"O":"Other Actions"
+		"O":"Other Actions",
+		"SK":"Search Menu"
 	}
 
 /**
