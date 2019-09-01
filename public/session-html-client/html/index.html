@@ -16,6 +16,12 @@ $(function(){
 	var userName_cookie = $.cookie("userName");
 	if(!userName_cookie||""==userName_cookie){
 		 window.location.href="welcome.html";
+		 return;
+	}
+	var userID =  $.cookie('userID');
+	if(!userID||""==userID){
+		window.location.href="welcome.html";
+		return;
 	}
 });
 </script>
