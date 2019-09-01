@@ -12,7 +12,7 @@
 <script src="../js/jquery.cookie.js"></script>
 <script type="text/javascript">
 $(function(){
-	$.removeCookie("userID");
+	$.removeCookie("userID",{ path: '/'});
 	var userName_cookie = $.cookie("userName");
 	if(!userName_cookie||""==userName_cookie){
 		 window.location.href="welcome.html";
