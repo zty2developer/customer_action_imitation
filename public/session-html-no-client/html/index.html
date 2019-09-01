@@ -16,6 +16,12 @@ $(function(){
 	var userName_cookie = $.cookie("userName");
 	if(!userName_cookie||""==userName_cookie){
 		 window.location.href="welcome.html";
+		 return;
+	}
+	var userID =  $.cookie('userID');
+	if(!userID||""==userID){
+		window.location.href="welcome.html";
+		return;
 	}
 });
 </script>
@@ -32,7 +38,7 @@ $(function(){
 				</div>
 				<div class="cur-right">
 					<p class="inline-block">
-						(<span id="CurrentSessionCount" >5</span>/<span id="totalSessionCount" >10</span>)
+						(<span id="CurrentSessionCount" >5</span>/<span id="totalSessionCount" >5</span>)
 					</p>
 					<div class="hbox">
 						<div class="col col-vs inline-block">
@@ -61,42 +67,42 @@ $(function(){
 					<div class="item-content" style=" margin-left: 15px;">
 						<div class="item">
 							<p id="actionsNum0"></p>
-							<div id="actionsimg0" class="img"> <img alt="no image" src="../image/KS.png"> </div>
+							<div id="actionsimg0" class="img"></div>
 							<p id="actionsinfo0" ></p>
 						</div>
 						<div class="item">
 							<p id="actionsNum1"></p>
-							<div id="actionsimg1" class="img" > <img alt="no image" src="../image/CS.png"> </div>
+							<div id="actionsimg1" class="img" ></div>
 							<p id="actionsinfo1" ></p>
 						</div>
 						<div class="item">
 							<p id="actionsNum2"></p>
-							<div id="actionsimg2" class="img"> <img alt="no image" src="../image/IV.png"> </div>
+							<div id="actionsimg2" class="img"></div>
 							<p  id="actionsinfo2" ></p>
 						</div>
 						<div class="item">
 							<p id="actionsNum3"></p>
-							<div id="actionsimg3" class="img"> <img alt="no image" src="../image/RV.png"> </div>
+							<div id="actionsimg3" class="img"></div>
 							<p  id="actionsinfo3" ></p>
 						</div>
 						<div class="item">
-							<p id="actionsNum4">1</p>
-							<div id="actionsimg4" class="img"> <img alt="no image" src="../image/OV.png"> </div>
+							<p id="actionsNum4"></p>
+							<div id="actionsimg4" class="img"></div>
 							<p  id="actionsinfo4" ></p>
 						</div>
 						<div class="item" >
-							<p id="actionsNum5">1</p>
-							<div id="actionsimg5" class="img"> <img alt="no image" src="../image/CHAT.png"> </div>
+							<p id="actionsNum5"></p>
+							<div id="actionsimg5" class="img"></div>
 							<p  id="actionsinfo5" ></p>
 						</div>
 						<div class="item" >
-							<p id="actionsNum6">1</p>
-							<div id="actionsimg6" class="img"> <img alt="no image" src="../image/C.png"> </div>
+							<p id="actionsNum6"></p>
+							<div id="actionsimg6" class="img"></div>
 							<p  id="actionsinfo6" ></p>
 						</div>
 						<div class="item" >
-							<p id="actionsNum7">1</p>
-							<div id="actionsimg7" class="img"> <img alt="no image" src="../image/AB.png"> </div>
+							<p id="actionsNum7"></p>
+							<div id="actionsimg7" class="img"></div>
 							<p id="actionsinfo7" ></p>
 						</div>
 						<div class="item item-point">...</div>
@@ -106,33 +112,33 @@ $(function(){
 					<div class="item-content">
 						<div class="item item-point">...</div>
 						<div class="item">
-							<p id="actionsNum8">1</p>
-							<div id="actionsimg8" class="img"> <img alt="no image" src="../image/VB.png"> </div>
+							<p id="actionsNum8"></p>
+							<div id="actionsimg8" class="img"></div>
 							<p id="actionsinfo8" ></p>
 						</div>
 						<div class="item">
-							<p id="actionsNum9">1</p>
-							<div id="actionsimg9" class="img"> <img alt="no image" src="../image/SI.png"> </div>
+							<p id="actionsNum9"></p>
+							<div id="actionsimg9" class="img"></div>
 							<p id="actionsinfo9"></p>
 						</div>
 						<div class="item" >
-							<p id="actionsNum10">1</p>
-							<div id="actionsimg10" class="img"> <img alt="no image" src="../image/SS.png"> </div>
+							<p id="actionsNum10"></p>
+							<div id="actionsimg10" class="img"></div>
 							<p id="actionsinfo10"></p>
 						</div>
 						<div class="item" >
-							<p id="actionsNum11">1</p>
-							<div id="actionsimg11" class="img"> <img alt="no image" src="../image/SC.png"> </div>
+							<p id="actionsNum11"></p>
+							<div id="actionsimg11" class="img"></div>
 							<p id="actionsinfo11"></p>
 						</div>
 						<div class="item">
-							<p id="actionsNum12">1</p>
-							<div id="actionsimg12"  class="img"> <img alt="no image" src="../image/CMT.png"> </div>
+							<p id="actionsNum12"></p>
+							<div id="actionsimg12"  class="img"></div>
 							<p id="actionsinfo12"></p>
 						</div>
 						<div class="item" >
-							<p id="actionsNum13">1</p>
-							<div id="actionsimg13"  class="img"> <img alt="no image" src="../image/O.png"> </div>
+							<p id="actionsNum13"></p>
+							<div id="actionsimg13"  class="img"></div>
 							<p id="actionsinfo13"></p>
 						</div>
 						<div class="item">

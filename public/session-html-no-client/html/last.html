@@ -13,9 +13,11 @@
 <script src="../js/jquery.cookie.js"></script>
 <script type="text/javascript">
 $(function(){
+	$.removeCookie("userID");
 	var userName_cookie = $.cookie("userName");
 	if(!userName_cookie||""==userName_cookie){
 		 window.location.href="welcome.html";
+		 return;
 	}
 });
 </script>
@@ -23,7 +25,7 @@ $(function(){
 <body>
    <div class="thanks">
        <p style="font-weight: bold">Thank you, <span id="userName" >Jimmy</span></p>
-       <p>You’ve completed Task M! In this task,</p>
+       <p>You’ve completed Task N! In this task,</p>
        <p>you gain <span id="totalpoint" >180</span> points with accuracy: Correct <span id="correct">0</span> Wrong <span id="Wrong">0</span> Missed <span id="Missed" >0</span> </p>
        <p>Please complete the following Questionnaire (3mins).</p>
    </div>
