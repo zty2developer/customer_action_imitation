@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no" />
+<title>thanks</title>
+<link rel="stylesheet" href="../css/index.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.removeCookie("userID");
+	var userName_cookie = $.cookie("userName");
+	if(!userName_cookie||""==userName_cookie){
+		 window.location.href="welcome.html";
+		 return;
+	}
+});
+</script>
+</head>
+<body>
+   <div class="thanks">
+       <p style="font-weight: bold">Thank you, <span id="userName" >Jimmy</span></p>
+       <p>You’ve completed Task M! In this task,</p>
+       <p>you gain <span id="totalpoint" >180</span> points with accuracy: Correct <span id="correct">0</span> Wrong <span id="Wrong">0</span> Missed <span id="Missed" >0</span> </p>
+       <p>Please complete the following Questionnaire (3mins).</p>
+   </div>
+   <a class="to-google" href="https://www.surveymonkey.co.uk/r/UON-YAI">www.surveymonkey.co.uk/r/UON-YAI</a>
+
+</body>
+<script type="text/javascript">
+var userName="";
+var totalpoint=0;
+var correct=0;
+var Wrong=0;
+var Missed=0;
+$(function(){
+	var userName_url = $.cookie("userName");
+	if(userName_url&&""!=userName_url){
+		userName=userName_url;
+	}
+	if(""==userName){
+		return;
+	}
+	var totalpoint_url=$.cookie("totalpoint");
+	if(totalpoint_url&&""!=totalpoint_url){
+		totalpoint=totalpoint_url;
+	}
+	var correct_url=$.cookie("correct");
+	if(correct_url&&""!=correct_url){
+		correct=correct_url;
+	}
+	var Wrong_url=$.cookie("Wrong");
+	if(Wrong_url&&""!=Wrong_url){
+		Wrong=Wrong_url;
+	}
+	var Missed_url=$.cookie("Missed");
+	if(Missed_url&&""!=Missed_url){
+		Missed=Missed_url;
+	}
+	$("#userName").html(userName);
+	$("#totalpoint").html(totalpoint);
+	$("#correct").html(correct);
+	$("#Wrong").html(Wrong);
+	$("#Missed").html(Missed);
+});
+
+</script>
+
+</html>

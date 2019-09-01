@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="format-detection" content="telephone=no" />
+<title>index</title>
+<link rel="stylesheet" href="../css/index.css">
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/siteinfo.js"></script>
+<script type="text/javascript">
+$(function(){
+	var userName_cookie = $.cookie("userName");
+	if(!userName_cookie||""==userName_cookie){
+		 window.location.href="welcome.html";
+		 return;
+	}
+	var userID =  $.cookie('userID');
+	if(!userID||""==userID){
+		window.location.href="welcome.html";
+		return;
+	}
+});
+</script>
+</head>
+<body>
+<div class="content" >
+	<div class="left" >
+		<div class="box">
+			<!-- Current Session 开始  -->
+			<div class="current-session">
+				<div class="cur-left">
+						<p>Current</p>	
+						<p>Customer</p>	
+				</div>
+				<div class="cur-right">
+					<p class="inline-block">
+						(<span id="CurrentSessionCount" >5</span>/<span id="totalSessionCount" >5</span>)
+					</p>
+					<div class="hbox">
+						<div class="col col-vs inline-block">
+							<div class="progress progress-sm">
+								<div id="process" class="progress-bar progress-bar-green progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 3.33333%;">
+								<span class="sr-only"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Current Session 开始  -->
+
+			<!-- Current Action 开始  -->
+			<!-- Current Action 结束  -->
+		
+
+			<!-- Actions History 开始  -->
+			<div class="history">
+				<div class="cur-left">
+					<p>Actions</p>	
+					<p>History</p>	
+				</div>
+				<div class="cur-right" >
+					<div class="item-content" style=" margin-left: 15px;">
+						<div class="item">
+							<p id="actionsNum0"></p>
+							<div id="actionsimg0" class="img"></div>
+							<p id="actionsinfo0" ></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum1"></p>
+							<div id="actionsimg1" class="img" ></div>
+							<p id="actionsinfo1" ></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum2"></p>
+							<div id="actionsimg2" class="img"></div>
+							<p  id="actionsinfo2" ></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum3"></p>
+							<div id="actionsimg3" class="img"></div>
+							<p  id="actionsinfo3" ></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum4"></p>
+							<div id="actionsimg4" class="img"></div>
+							<p  id="actionsinfo4" ></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum5"></p>
+							<div id="actionsimg5" class="img"></div>
+							<p  id="actionsinfo5" ></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum6"></p>
+							<div id="actionsimg6" class="img"></div>
+							<p  id="actionsinfo6" ></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum7"></p>
+							<div id="actionsimg7" class="img"></div>
+							<p id="actionsinfo7" ></p>
+						</div>
+						<div class="item item-point">...</div>
+					</div>
+
+					<!-- 第二行 -->
+					<div class="item-content">
+						<div class="item item-point">...</div>
+						<div class="item">
+							<p id="actionsNum8"></p>
+							<div id="actionsimg8" class="img"></div>
+							<p id="actionsinfo8" ></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum9"></p>
+							<div id="actionsimg9" class="img"></div>
+							<p id="actionsinfo9"></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum10"></p>
+							<div id="actionsimg10" class="img"></div>
+							<p id="actionsinfo10"></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum11"></p>
+							<div id="actionsimg11" class="img"></div>
+							<p id="actionsinfo11"></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum12"></p>
+							<div id="actionsimg12"  class="img"></div>
+							<p id="actionsinfo12"></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum13"></p>
+							<div id="actionsimg13"  class="img"></div>
+							<p id="actionsinfo13"></p>
+						</div>
+						<div class="item">
+							<p id="actionsNum14" ></p>
+							<div  id="actionsimg14" class="img">
+							</div>
+							<p id="actionsinfo14"></p>
+						</div>
+						<div class="item" >
+							<p id="actionsNum15" ></p>
+							<div id="actionsimg15"  class="img">
+								
+							</div>
+							<p id="actionsinfo15"></p>
+						</div>
+						<div class="item item-point">...</div>
+					</div>
+
+					<!-- 第三行 -->
+					<div class="item-content">
+						<div class="item item-point">...</div>
+						<div class="item">
+							<p   id="actionsNum16"  ></p>
+							<div id="actionsimg16"  class="img">
+								
+							</div>
+							<p id="actionsinfo16"></p>
+						</div>
+						<div class="item" >
+							<p  id="actionsNum17"  ></p>
+							<div id="actionsimg17"  class="img">
+								
+							</div>
+							<p id="actionsinfo17"></p>
+						</div>
+						<div class="item" >
+							<p  id="actionsNum18"  ></p>
+							<div id="actionsimg18"  class="img">
+								
+							</div>
+							<p id="actionsinfo18"></p>
+						</div>
+						<div class="item" >
+							<p  id="actionsNum19"  ></p>
+							<div id="actionsimg19"  class="img">
+								
+							</div>
+							<p id="actionsinfo19"></p>
+						</div>
+						<div class="item" >
+							<p  id="actionsNum20"  ></p>
+							<div id="actionsimg20"  class="img">
+								
+							</div>
+							<p id="actionsinfo20"></p>
+						</div>
+						<div class="item">
+							<p  id="actionsNum21"  ></p>
+							<div id="actionsimg21"  class="img">
+								
+							</div>
+							<p id="actionsinfo21"></p>
+						</div>
+						<div class="item">
+							<p  id="actionsNum22"  ></p>
+							<div id="actionsimg22"  class="img">
+								
+							</div>
+							<p id="actionsinfo22"></p>
+						</div>
+						<div class="item" id="actions7" >
+							<p   id="actionsNum23"  ></p>
+							<div id="actionsimg23"  class="img">
+								
+							</div>
+							<p id="actionsinfo23"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Actions History 结束  -->
+		</div>
+	</div>
+
+	<div class="right right-top">
+		<div class="box" >
+			<!-- What`s your prediction 开始 -->
+			
+			<div>
+				<p  class="size20 ">AI System Suggests you, currently:</p>
+				<div class="prediction-action">
+					<div class="action-text" >
+						<span id="currentActionPrediction" class="size20" >40.12%</span>
+					</div>
+					<div class="action-img" >
+						<img id="currentActionImage"  src="../image/predict-NI.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div>
+				<p class="size20">Your Decision:</p>
+				<p class="size14">(if correct,you will gain points, if wrong,you will lose points.)</p>
+			</div>
+			
+			<!-- What`s your prediction 结束 -->
+	
+			<!-- 提交按钮  开始 -->
+			<div class="submit">
+				<input id="submitBTN" type="button" value="Intervene this customer" />
+			</div>
+			<!-- 提交按钮  结束 -->
+	
+		</div>
+	</div>
+	<div class="right">
+		<div class="box" >
+			<!-- 个人数据   开始-->
+			<div class="grsj">
+				<div>
+					<span>Hi,</span>
+					<span id="userName" >Jimmy</span>
+				</div>
+				<div class="sj">
+					<p>Your Total Point:</p>
+					<p id="totalpoint" class="size40" >0</p>
+				</div>
+				<div class="sj">
+					<p>Accuracy of You:</p>
+					<p>
+						<span class=""> Correct <span id="correct">0</span></span>	   
+						<span class=""> Wrong <span id="Wrong">0</span></span>
+						<span class=""> Missed <span id="Missed" >0</span></span>
+					</p>
+				</div>
+			</div>
+			<!-- 个人数据   结束-->
+		</div>
+	</div>
+
+	<!-- 弹框提示 开始 -->
+	<div id="modal" class="box modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="text-center ">Result</h3>
+					</div>
+					<div class="modal-body clearfix">
+						<div class="img">
+							<img class="dui" src="../image/dui.png" alt="">
+							<img class="cuo" src="../image/cuo.png" alt="">
+							<img class="missed" src="../image/Missed.png" alt="">
+						</div>
+						<div class="text">
+							<p id="ResultMessage" ></p>
+							<p class="size30">&nbsp;&nbsp;&nbsp;&nbsp;<span id="Result" > Gain 10</span></p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="submit">
+							<input id="" type="button" value="Next Session >" onclick='nextEven("modal");'>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- 弹框提示 结束 -->
+	
+	<!-- 超时提示 开始 -->
+	 <div id="timeOutDiv" class="box modal" >
+	 		<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="text-center ">Result</h3>
+					</div>
+					<div class="modal-body clearfix">
+						<div id="timeOutMessage" class="text" style="width: 100%;" >
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="submit">
+							<input id="" type="button" value="OK" onclick='nextEven("timeOutDiv");'>
+						</div>
+					</div>
+				</div>
+			</div>
+	 </div>
+	<!-- 超时提示 结束 -->
+	
+	<!-- How confident are you 开始  -->
+	<div id="ConfidenceLevel" class="box modal" >
+		<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="text-center ">Confidence Level</h3>
+					</div>
+					<div class="modal-body clearfix" style="padding-top: 20px;padding-bottom: 20px;" >
+						<div>
+							<p class="size20">How confident are you ?</p>
+							<p class="size14">(It won't influence your points. Just choose how confident are you to this decision of intervention. Thanks!)</p>
+				
+							<div class="prediction">
+								<label>
+									<input type="radio" name="confidentradio" value="25" id="confidentradio40" context="Very Confident" />Very Confident
+								</label>
+								<label>
+									<input type="radio" name="confidentradio" value="25" id="confidentradio30" context="Confident" />Confident
+								</label>
+								<label>
+									<input type="radio" name="confidentradio" value="25" id="confidentradio20" context="Unconfident" />Unconfident
+								</label>
+								<label>
+									<input type="radio" name="confidentradio" value="25" id="confidentradio10" context="Very Unconfident" />Very Unconfident
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="submit">
+							<input id="" type="button" value="Confirm" onclick="submitEven();" >
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<!-- How confident are you 结束  -->
+
+</div>
+
+
+<script src="../js/index.js"></script>
+</body>
+</html>
