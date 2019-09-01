@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       render json: {status: -1, message: "User ID Exists. (with_prediction: #{with_prediction})"}
     else
       user = User.new(login: user_login)
-      if [0, 1, 2].include?(with_prediction)
+      if [0, 1, 2, 3].include?(with_prediction)
         user.with_prediction = with_prediction
       else
         render json: { status: -1, message: 'parameter with_prediction is incorrect.' }
