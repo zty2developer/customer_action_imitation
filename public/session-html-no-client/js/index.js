@@ -217,7 +217,7 @@ function refreshTaskFN() {
 				$(".cuo").hide();
 				$(".dui").show();
 				$(".missed").hide();
-				$("#ResultMessage").html("Finally the customer purchased products !");
+				$("#ResultMessage").html("The customer liked to talk with you!");
 				$("#Result").html("Gain&nbsp;"+confidentradio);
 				$("#modal").show();
 				
@@ -282,7 +282,7 @@ function submitEven(){
 		$(".cuo").hide();
 		$(".dui").show();
 		$(".missed").hide();
-		$("#ResultMessage").html("Customer liked to talk with you!");
+		$("#ResultMessage").html("The customer liked to talk with you!");
 		$("#Result").html("Gain&nbsp;"+confidentradio);
 		$("#modal").show();
 	}else{
@@ -295,7 +295,7 @@ function submitEven(){
 		$(".cuo").show();
 		$(".dui").hide();
 		$(".missed").hide();
-		$("#ResultMessage").html("Customer felt you are annoying!");
+		$("#ResultMessage").html("The customer felt that you were annoying!");
 		$("#Result").html("Lost&nbsp;"+confidentradio);
 		$("#modal").show();
 	}
