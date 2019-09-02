@@ -204,10 +204,10 @@ function refreshTaskFN() {
 	currentActionIndex++;
 	if (currentActionIndex == currentActionLength) {
 		
-		
+		$("#submitBTN").removeAttr("onclick");
 		clearInterval(refreshTask);
 		//不点击时
-		setTimeout(function(){
+//		setTimeout(function(){
 			var confidentradio=25;
 			if("P"==currentTruePurchaseLabel){
 				totalpoint=totalpoint+parseInt(confidentradio);
@@ -236,7 +236,7 @@ function refreshTaskFN() {
 				$("#Result").html("Lost&nbsp;"+confidentradio);
 				$("#modal").show();
 			}
-		},1000);
+//		},1000);
 		sendData(userName,mockData[currentSessionIndex].SessionIndex,currentActionIndex,mockData[currentSessionIndex].PurchasePrediction[currentActionIndex-1],"NI",25);
 		
 		currentActionIndex = 0;
